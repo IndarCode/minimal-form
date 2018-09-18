@@ -1,0 +1,204 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #252525;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a:focus, input:focus, button:focus{
+  outline: none;
+}
+html, body{
+  height: 100%;
+}
+a.logo {
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    z-index: 9;
+    max-width: 12em;
+}
+
+
+div#root {
+    padding: 2%;
+}
+header {
+    padding: 3%;
+    background-color: #220223;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 300;
+    top: -55px;
+}
+header h2 {
+    font-size: 2.5em;
+    font-weight: 100;
+    color: #a800ad;
+    position: absolute;
+    right: 0;
+    left: -150%;
+    top: 50%;
+    margin-top: -25px;
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+}
+header h2.show {
+    left: 0px;
+}
+header .hidden {
+    opacity: 0;
+}
+header ul {
+    width: 50%;
+    height: 130px;
+    position: relative;
+    margin: 0 auto;
+}
+header ul li {
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 0;
+}
+header button {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    margin-top: 4px;
+    background-image: url(images/arrow.png);
+    z-index: 1;
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.loader {
+    width: 50%;
+    background-color: #757575;
+    margin: 2px auto;
+    overflow: hidden;
+}
+.loader span{
+    background-color: #a000a5;
+    display: block;
+    height: 5px;
+    width: 40%;
+    transition: all 0.3s ease-in-out;
+}
+.stage-holder i {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+    display: inline-block;
+    margin: 0 5px;
+}
+.stage-holder span {
+    color: #fff;
+}
+.stage-holder {
+    max-width: 50%;
+    text-align: right;
+    margin: 10px auto 0;
+}
+ul li.current{
+  opacity: 1;
+  z-index: 1;
+}
+header ul li span {
+    display: block;
+    text-align: left;
+    margin-top: 9px;
+    color: #e00;
+    font-weight: 100;
+    font-size: 16px;
+    display: none;
+}
+header ul li input[error] + span {
+    display: block;
+}
+ul li label {
+    display: block;
+    text-align: left;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+    transform: translateY(35px);
+    transition: all 0.3s ease-in-out;
+}
+ul li.current label {
+    transform: translateY(0px);
+}
+ul li input {
+    border: none;
+    padding: 1em 2em;
+    font-size: 28px;
+    width: 100%;
+}
+
+
+
+.mail-box {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 5%;
+}
+.mail-box p {
+    font-size: 21px;
+    line-height: 27px;
+}
+.mail-box p.content {
+    margin: 15px 0 40px;
+}
+.mail-box p span{
+  font-weight: 600;
+  color: #aa00af;
+}
+.mail-box[show = false] {
+    display: none;
+}
+.mail-box[show = true] {
+    display: block;
+}
+
+
+
+
+
+
+/*Font responsive for all screen*/
+
+@media (min-width: 1921px) and (max-width: 2420px){
+    body{font-size: 16px;}
+}
+@media (min-width: 1601px) and (max-width: 1920px){
+    body{font-size: 16px;}
+}
+@media (min-width: 1368px) and (max-width: 1600px){
+    body{font-size: 16px;}
+}
+@media (min-width: 768px) and (max-width: 1367px){
+    body{font-size: 14px;}
+}
+@media (max-width: 767px){
+    body{font-size: 13px;}
+}
+
+/*End of Font responsive for all screen*/
